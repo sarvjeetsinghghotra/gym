@@ -199,6 +199,10 @@ register(
     entry_point='gym.envs.mujoco:HumanoidEnv',
 )
 
+register(
+    id='Sphere-v0',
+    entry_point='gym.envs.mujoco:SphereEnv',
+)
 # Atari
 # ----------------------------------------
 

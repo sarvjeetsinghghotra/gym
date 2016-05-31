@@ -346,6 +346,18 @@ The robot model was originally created by Tassa et al. [Tassa12]_.
 """,
 )
 
+add_task(
+    id='Sphere-v0',
+    group='mujoco',
+    summary="Make a 2D sphere to roll.",
+    description="""\
+Make a three-dimensional bipedal robot walk forward as fast as possible, without falling over.
+""",
+    background="""\
+Blah blah
+""",
+)
+
 # toy text
 
 add_task(

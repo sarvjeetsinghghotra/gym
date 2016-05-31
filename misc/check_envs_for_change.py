@@ -1,4 +1,4 @@
-ENVS = ["Ant-v0", "HalfCheetah-v0", "Hopper-v0", "Humanoid-v0", "InvertedDoublePendulum-v0", "Reacher-v0", "Swimmer-v0", "Walker2d-v0"]
+ENVS = ["Ant-v0", "HalfCheetah-v0", "Hopper-v0", "Humanoid-v0", "InvertedDoublePendulum-v0", "Reacher-v0", "Sphere-v0", "Swimmer-v0", "Walker2d-v0"]
 OLD_COMMIT = "HEAD"
 
 # ================================================================
