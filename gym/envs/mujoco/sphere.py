@@ -4,7 +4,7 @@ from gym.envs.mujoco import mujoco_env
 
 class SphereEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self):
-        mujoco_env.MujocoEnv.__init__(self, 'sphere.xml', 4)
+        mujoco_env.MujocoEnv.__init__(self, 'sphere1.xml', 4)
         utils.EzPickle.__init__(self)
     
     def _step(self, a):
@@ -24,14 +24,19 @@ class SphereEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         return ob, reward, False, dict(reward_dist = reward_dist, reward_ctrl=reward_ctrl, reward_fwd = reward_fwd)
     
     def _get_obs(self):
-        qpos = self.model.data.qpos
+        """qpos = self.model.data.qpos
         qvel = self.model.data.qvel
-        return np.concatenate([qpos.flat[2:], qvel.flat])
+        print("qpos:")
+        print(qpos)"""
+        vec = self.get_body_com("ball")
+        print("vec:")
+        print(vec)
+        return self.get_body_com("ball")
     
     def reset_model(self):
-        self.set_state(
+        """self.set_state(
             self.init_qpos + np.random.uniform(low=-.1, high=.1, size=self.model.nq),
             self.init_qvel + np.random.uniform(low=-.1, high=.1, size=self.model.nv)
-        )
+        )"""
         return self._get_obs()
 
